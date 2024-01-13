@@ -181,10 +181,10 @@ const Form = () => {
         onSubmit={handleSubmit}
         className="flex flex-col justify-center py-4 items-center w-full mx-3 md:max-w-[35em] bg-gray-400/55 rounded-lg overflow-x-hidden"
       >
-        <h1 className="text-2xl w-full font-bold uppercase text-center bg-red-200 pb-6">
+        <h1 className="text-2xl w-full font-bold uppercase text-center pb-6">
           Create New Pokemon
         </h1>
-        <div className="flex w-full justify-center items-center md:flex-row gap-6 bg-green-300">
+        <div className="flex w-full justify-center items-center md:flex-row gap-6 ">
           <div className="w-1/2 flex flex-col items-center">
             <div className={`${formErrors.name ? "pb-0" : "pb-[24px]"}`}>
               <input
@@ -292,9 +292,9 @@ const Form = () => {
           </div>
         </div>
         <fieldset className="w-full  items-center justify-center flex flex-col">
-          <h2 className="uppercase font-bold">Select the types:</h2>
+          <h2 className="uppercase font-bold mb-5">Select the types:</h2>
 
-          <div className="w-[90%] flex  gap-3 bg-purple-400 overflow-x-auto scrollbar-hide">
+          <div className="w-[28em] md:w-[30em] mb-5 flex gap-3 overflow-x-auto scrollbar-hide">
             {PokemonTypes.map((type) => {
               return (
                 <div key={type} className="flex gap-2">
@@ -321,11 +321,16 @@ const Form = () => {
           </div>
           <p>{formErrors.types}</p>
         </fieldset>
-        <footer className="">
-          <button type="submit" className={styles.btn}>
+        <footer className="flex w-full justify-evenly">
+          <button
+            type="submit"
+            className="ring-2 ring-green-700 px-8 py-2 text-green-700 hover:text-white hover:bg-green-700 rounded-full"
+          >
             Create
           </button>
-          <button className={styles.btn2}>Cancel</button>
+          <button className="ring-2 ring-red-700 px-8 py-2 text-red-700 hover:text-white hover:bg-red-700 rounded-full">
+            Cancel
+          </button>
         </footer>
       </form>
     </div>

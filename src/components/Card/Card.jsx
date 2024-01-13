@@ -26,7 +26,7 @@ const Card = ({ name, image, pokemonId, type }) => {
       to={`/detail/${pokemonId}`}
       style={{ textDecoration: "none", color: "black" }}
     >
-      <div className={styles.card}>
+      <div className="w-[13em] h-[20em] rounded-xl bg-white shadow-md shadow-gray-900">
         <div
           style={{
             backgroundColor: `${bgColor}`,
@@ -48,8 +48,8 @@ const Card = ({ name, image, pokemonId, type }) => {
             </p>
             <h4>{name}</h4>
           </div>
-          <div className={styles.types}>
-            {type.map((e, i) => (
+          <div className="w-[30%] h-full flex flex-col items-center justify-evenly mr-2">
+            {type?.map((e, i) => (
               <TypeLabel key={i} element={e} />
             ))}
           </div>

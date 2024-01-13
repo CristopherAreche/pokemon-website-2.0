@@ -21,15 +21,7 @@
   box-shadow: 1px 0px 31px 5px rgba(0, 0, 0, 0.4);
   background-color: white;
 }
-.imageContainer {
-  width: 100%;
-  height: 65%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-top-right-radius: 1em;
-  border-top-left-radius: 1em;
-}
+
 .textContainer {
   height: 35%;
   color: rgb(27, 27, 27);
